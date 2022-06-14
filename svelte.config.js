@@ -1,7 +1,7 @@
 // /* eslint-disable no-undef */
 
 import node from '@sveltejs/adapter-node'
-import adapter from '@sveltejs/adapter-cloudflare-workers'
+import adapter from '@sveltejs/adapter-netlify'
 // import worker from '@snuffydev/adapter-cloudflare-cache'
 import autoprefixer from 'autoprefixer'
 import cssnano from 'cssnano'
@@ -11,8 +11,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 
-const rootDomain = process.env["VITE_DOMAIN"]; // or your server IP for dev
-const originURL = process.env["VITE_SITE_URL"]; // or your server IP for dev
+const rootDomain = process.env["quiet-frangipane-36634a.netlify.app"]; // or your server IP for dev
+const originURL = process.env["https://quiet-frangipane-36634a.netlify.app"]; // or your server IP for dev
 
 const check = process.env.NODE_ENV
 const dev = check === 'development'
